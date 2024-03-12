@@ -60,6 +60,7 @@ struct U_Widget: Widget {
                 .containerBackground(.fill.tertiary, for: .widget)
         }
         .configurationDisplayName("U_Widget")
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
