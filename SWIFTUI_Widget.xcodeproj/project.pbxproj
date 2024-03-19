@@ -23,7 +23,6 @@
 		342075F82BA044FF00407C3D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342075F72BA044FF00407C3D /* AppIntent.swift */; };
 		342075FA2BA0450000407C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342075F92BA0450000407C3D /* Assets.xcassets */; };
 		342075FE2BA0450000407C3D /* U_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 342075ED2BA044FF00407C3D /* U_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		342076042BA83C2D00407C3D /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 342076032BA83C2D00407C3D /* WidgetIntents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,9 @@
 		342075F72BA044FF00407C3D /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		342075F92BA0450000407C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		342075FB2BA0450000407C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		342076032BA83C2D00407C3D /* WidgetIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetIntents.intentdefinition; sourceTree = "<group>"; };
+		34F0BCFE2BA98E6B00E2EDF9 /* SWIFTUI-Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SWIFTUI-Widget-Info.plist"; sourceTree = SOURCE_ROOT; };
+		34F0BD042BA98EA800E2EDF9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		34F0BD0F2BA98EA800E2EDF9 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +158,7 @@
 		340842882B9EFA5A00DFF30A /* SWIFTUI_Widget */ = {
 			isa = PBXGroup;
 			children = (
+				34F0BCFE2BA98E6B00E2EDF9 /* SWIFTUI-Widget-Info.plist */,
 				340842892B9EFA5A00DFF30A /* SWIFTUI_WidgetApp.swift */,
 				3408428B2B9EFA5A00DFF30A /* ContentView.swift */,
 				3408428D2B9EFA5B00DFF30A /* Assets.xcassets */,
@@ -195,6 +197,8 @@
 			children = (
 				342075D22BA0444A00407C3D /* WidgetKit.framework */,
 				342075D42BA0444A00407C3D /* SwiftUI.framework */,
+				34F0BD042BA98EA800E2EDF9 /* Intents.framework */,
+				34F0BD0F2BA98EA800E2EDF9 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,7 +211,6 @@
 				342075F72BA044FF00407C3D /* AppIntent.swift */,
 				342075F92BA0450000407C3D /* Assets.xcassets */,
 				342075FB2BA0450000407C3D /* Info.plist */,
-				342076032BA83C2D00407C3D /* WidgetIntents.intentdefinition */,
 			);
 			path = U_Widget;
 			sourceTree = "<group>";
@@ -427,7 +430,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342076042BA83C2D00407C3D /* WidgetIntents.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +595,7 @@
 				DEVELOPMENT_TEAM = 6V8879W55Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SWIFTUI-Widget-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -623,6 +626,7 @@
 				DEVELOPMENT_TEAM = 6V8879W55Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SWIFTUI-Widget-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

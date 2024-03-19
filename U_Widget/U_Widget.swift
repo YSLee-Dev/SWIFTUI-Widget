@@ -47,6 +47,9 @@ struct U_WidgetEntryView : View {
 
             Text("Favorite Emoji:")
             Text(entry.configuration.favoriteEmoji)
+            
+            Text("User text")
+            Text(entry.configuration.userText)
         }
     }
 }
