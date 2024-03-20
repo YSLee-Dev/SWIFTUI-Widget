@@ -9,14 +9,34 @@ import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
+    @State var tfText: String = ""
+    @State var userSaveWord: [String] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ScrollView {
+            VStack {
+                HStack {
+                    TextField("저장하고 싶은 값을 입력하세요.", text: $tfText)
+                    Button(action: {
+                        guard self.tfText != "",
+                              !self.userSaveWord.contains(self.tfText) else {return}
+                        self.userSaveWord.append(tfText)
+                        self.tfText = ""
+                        UserDefaults.standard.setValue(self.userSaveWord, forKey: "SaveWords")
+                        
+                    }, label: {
+                       Text("저장")
+                    })
+                }
+                .padding(.vertical, 20)
+                
+                Text("저장된 값")
+                ForEach(userSaveWord,id: \.self) {
+                    Text($0)
+                }
+            }
+            .padding()
         }
-        .padding()
         .onAppear {
             WidgetCenter.shared.getCurrentConfigurations { result in
                 switch result {
@@ -28,6 +48,10 @@ struct ContentView: View {
                     print(error)
                 }
             }
+            
+            guard let saveWords = UserDefaults.standard.object(forKey: "SaveWords") as? [String] else {return}
+            
+            self.userSaveWord = saveWords
         }
     }
 }
