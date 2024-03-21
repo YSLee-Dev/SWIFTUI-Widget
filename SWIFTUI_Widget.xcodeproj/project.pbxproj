@@ -23,6 +23,8 @@
 		342075F82BA044FF00407C3D /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342075F72BA044FF00407C3D /* AppIntent.swift */; };
 		342075FA2BA0450000407C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342075F92BA0450000407C3D /* Assets.xcassets */; };
 		342075FE2BA0450000407C3D /* U_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 342075ED2BA044FF00407C3D /* U_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34F0BD302BAC2C5A00E2EDF9 /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */; };
+		34F0BD342BAC2FDA00E2EDF9 /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,9 @@
 		34F0BCFE2BA98E6B00E2EDF9 /* SWIFTUI-Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SWIFTUI-Widget-Info.plist"; sourceTree = SOURCE_ROOT; };
 		34F0BD042BA98EA800E2EDF9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		34F0BD0F2BA98EA800E2EDF9 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		34F0BD2C2BAC2B8C00E2EDF9 /* SWIFTUI_Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SWIFTUI_Widget.entitlements; sourceTree = "<group>"; };
+		34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
+		34F0BD332BAC2FB900E2EDF9 /* U_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = U_WidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +139,7 @@
 		3408427D2B9EFA5A00DFF30A = {
 			isa = PBXGroup;
 			children = (
+				34F0BD332BAC2FB900E2EDF9 /* U_WidgetExtension.entitlements */,
 				340842882B9EFA5A00DFF30A /* SWIFTUI_Widget */,
 				340842992B9EFA5B00DFF30A /* SWIFTUI_WidgetTests */,
 				340842A32B9EFA5B00DFF30A /* SWIFTUI_WidgetUITests */,
@@ -158,6 +164,7 @@
 		340842882B9EFA5A00DFF30A /* SWIFTUI_Widget */ = {
 			isa = PBXGroup;
 			children = (
+				34F0BD2C2BAC2B8C00E2EDF9 /* SWIFTUI_Widget.entitlements */,
 				34F0BCFE2BA98E6B00E2EDF9 /* SWIFTUI-Widget-Info.plist */,
 				340842892B9EFA5A00DFF30A /* SWIFTUI_WidgetApp.swift */,
 				3408428B2B9EFA5A00DFF30A /* ContentView.swift */,
@@ -206,6 +213,7 @@
 		342075F02BA044FF00407C3D /* U_Widget */ = {
 			isa = PBXGroup;
 			children = (
+				34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */,
 				342075F12BA044FF00407C3D /* U_WidgetBundle.swift */,
 				342075F52BA044FF00407C3D /* U_Widget.swift */,
 				342075F72BA044FF00407C3D /* AppIntent.swift */,
@@ -405,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3408428C2B9EFA5A00DFF30A /* ContentView.swift in Sources */,
+				34F0BD342BAC2FDA00E2EDF9 /* UserDefault+.swift in Sources */,
 				3408428A2B9EFA5A00DFF30A /* SWIFTUI_WidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F0BD302BAC2C5A00E2EDF9 /* UserDefault+.swift in Sources */,
 				342075F62BA044FF00407C3D /* U_Widget.swift in Sources */,
 				342075F82BA044FF00407C3D /* AppIntent.swift in Sources */,
 				342075F22BA044FF00407C3D /* U_WidgetBundle.swift in Sources */,
@@ -589,6 +599,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SWIFTUI_Widget/SWIFTUI_Widget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SWIFTUI_Widget/Preview Content\"";
@@ -620,6 +631,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SWIFTUI_Widget/SWIFTUI_Widget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SWIFTUI_Widget/Preview Content\"";
@@ -780,6 +792,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = U_WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6V8879W55Z;
@@ -807,6 +820,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = U_WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6V8879W55Z;

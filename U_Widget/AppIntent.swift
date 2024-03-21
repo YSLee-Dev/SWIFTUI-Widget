@@ -8,7 +8,19 @@
 import WidgetKit
 import AppIntents
 
-struct ConfigurationAppIntent: WidgetConfigurationIntent {
+enum FavoriteAnimal: String, AppEnum {
+    case dog, cat,rabbit
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "FavoriteAnimal"
+    static var caseDisplayRepresentations: [FavoriteAnimal : DisplayRepresentation] = [
+        .dog: "🐶",
+        .cat: "🐱",
+        .rabbit: "🐰"
+    ]
+}
+
+struct ConfigurationAppIntent: WidgetConfigurationIntent, AppIntent, CustomIntentMigratedAppIntent {
+    static var intentClassName: String = "ConfigurationAppIntent"
+    
     static var title: LocalizedStringResource = "Configuration"
     static var description = IntentDescription("This is an example widget.")
 
@@ -16,8 +28,21 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
     @Parameter(title: "Favorite Emoji", default: "😃")
     var favoriteEmoji: String
     
-    @Parameter(title: "UserText", default: "Hello")
+    @Parameter(title: "User Text", default: "Hello")
     var userText: String
     
+    @Parameter(title: "Favorite Animal")
+    var favoriteAnimal: FavoriteAnimal
     
+    @Parameter(title: "Save Words", optionsProvider: UserSaveWords())
+    var saveWords: String?
+}
+
+struct UserSaveWords: DynamicOptionsProvider {
+    func results() async throws -> [String] {
+        guard let words = UserDefaults.shareD.object(forKey: "SaveWords") as? [String] else {return ["NOTLOADING"] }
+        return words
+    }
+    
+    typealias Result = [String]
 }

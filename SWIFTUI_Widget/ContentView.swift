@@ -22,7 +22,8 @@ struct ContentView: View {
                               !self.userSaveWord.contains(self.tfText) else {return}
                         self.userSaveWord.append(tfText)
                         self.tfText = ""
-                        UserDefaults.standard.setValue(self.userSaveWord, forKey: "SaveWords")
+                        UserDefaults.shareD.setValue(self.userSaveWord, forKey: "SaveWords")
+                        WidgetCenter.shared.reloadAllTimelines()
                         
                     }, label: {
                        Text("저장")
@@ -49,7 +50,7 @@ struct ContentView: View {
                 }
             }
             
-            guard let saveWords = UserDefaults.standard.object(forKey: "SaveWords") as? [String] else {return}
+            guard let saveWords = UserDefaults.shareD.object(forKey: "SaveWords") as? [String] else {return}
             
             self.userSaveWord = saveWords
         }
