@@ -18,7 +18,7 @@ enum FavoriteAnimal: String, AppEnum {
     ]
 }
 
-struct ConfigurationAppIntent: WidgetConfigurationIntent, AppIntent, CustomIntentMigratedAppIntent {
+struct ConfigurationAppIntent: WidgetConfigurationIntent {
     static var intentClassName: String = "ConfigurationAppIntent"
     
     static var title: LocalizedStringResource = "Configuration"
