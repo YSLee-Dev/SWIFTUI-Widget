@@ -42,14 +42,16 @@ struct U_WidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
             Text("Favorite Emoji:")
             Text(entry.configuration.favoriteEmoji)
             
-            Text("User text")
+            Text("User text:")
             Text(entry.configuration.userText)
+            
+            if let saveWord = entry.configuration.saveWords {
+                Text("Save Word:")
+                Text(saveWord)
+            }
         }
     }
 }

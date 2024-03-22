@@ -40,7 +40,7 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent, AppIntent, CustomInten
 
 struct UserSaveWords: DynamicOptionsProvider {
     func results() async throws -> [String] {
-        guard let words = UserDefaults.shareD.object(forKey: "SaveWords") as? [String] else {return ["NOTLOADING"] }
+        guard let words = UserDefaults(suiteName: "group.com.SWIFTUI-Widget")!.object(forKey: "SaveWords") as? [String] else {return ["NOTLOADING"] }
         return words
     }
     
