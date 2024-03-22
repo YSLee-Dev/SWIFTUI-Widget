@@ -42,15 +42,31 @@ struct U_WidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+            HStack {
+                Text("Emoji:")
+                    .font(.system(size: 12))
+                Text(entry.configuration.favoriteEmoji)
+                    .lineLimit(1)
+                    .font(.system(size: 12))
+            }
             
-            Text("User text:")
-            Text(entry.configuration.userText)
+            HStack {
+                Text("Insert text:")
+                    .font(.system(size: 12))
+                Text(entry.configuration.userText)
+                    .lineLimit(1)
+                    .font(.system(size: 12))
+            }
             
             if let saveWord = entry.configuration.saveWords {
-                Text("Save Word:")
-                Text(saveWord)
+                HStack {
+                    Text("Save Word:")
+                        .font(.system(size: 12))
+                    Text(saveWord)
+                        .lineLimit(1)
+                        .font(.system(size: 12))
+                }
+                
             }
         }
     }
