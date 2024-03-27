@@ -24,6 +24,8 @@
 		342075FA2BA0450000407C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 342075F92BA0450000407C3D /* Assets.xcassets */; };
 		342075FE2BA0450000407C3D /* U_WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 342075ED2BA044FF00407C3D /* U_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		34F0BD342BAC2FDA00E2EDF9 /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */; };
+		34F0BD382BB4009500E2EDF9 /* DataLoadingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0BD372BB4009500E2EDF9 /* DataLoadingModel.swift */; };
+		34F0BD392BB4009800E2EDF9 /* DataLoadingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0BD372BB4009500E2EDF9 /* DataLoadingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,7 @@
 		34F0BD2D2BAC2BC500E2EDF9 /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
 		34F0BD332BAC2FB900E2EDF9 /* U_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = U_WidgetExtension.entitlements; sourceTree = "<group>"; };
 		34F0BD362BAD632700E2EDF9 /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
+		34F0BD372BB4009500E2EDF9 /* DataLoadingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,7 @@
 				34F0BCFE2BA98E6B00E2EDF9 /* SWIFTUI-Widget-Info.plist */,
 				340842892B9EFA5A00DFF30A /* SWIFTUI_WidgetApp.swift */,
 				3408428B2B9EFA5A00DFF30A /* ContentView.swift */,
+				34F0BD372BB4009500E2EDF9 /* DataLoadingModel.swift */,
 				3408428D2B9EFA5B00DFF30A /* Assets.xcassets */,
 				3408428F2B9EFA5B00DFF30A /* Preview Content */,
 			);
@@ -415,6 +419,7 @@
 			files = (
 				3408428C2B9EFA5A00DFF30A /* ContentView.swift in Sources */,
 				34F0BD342BAC2FDA00E2EDF9 /* UserDefault+.swift in Sources */,
+				34F0BD382BB4009500E2EDF9 /* DataLoadingModel.swift in Sources */,
 				3408428A2B9EFA5A00DFF30A /* SWIFTUI_WidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +454,7 @@
 			files = (
 				342075F62BA044FF00407C3D /* U_Widget.swift in Sources */,
 				342075F82BA044FF00407C3D /* AppIntent.swift in Sources */,
+				34F0BD392BB4009800E2EDF9 /* DataLoadingModel.swift in Sources */,
 				342075F22BA044FF00407C3D /* U_WidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

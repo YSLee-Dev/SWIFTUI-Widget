@@ -62,8 +62,8 @@ struct U_WidgetEntryView : View {
                 HStack {
                     Text("Save Word:")
                         .font(.system(size: 12))
-                    Text(saveWord)
-                        .lineLimit(1)
+                    Text(DataLoadingModel.userSeletedText(saveWord))
+                        .lineLimit(2)
                         .font(.system(size: 12))
                 }
                 
